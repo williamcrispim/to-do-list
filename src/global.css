@@ -7,13 +7,18 @@
   --gray-600: #1A1A1A;
   --gray-700: #0D0D0D;
 
-  --blue-dark: #1E6F9F;
   --blue: #4EA8DE;
+  --blue-dark: #1E6F9F;
 
-  --purple-dark: #5E60CE;
   --purple: #8284FA;
+  --purple-dark: #5E60CE;
 
   --danger: #E25858;
+}
+
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 1px var(--purple-dark);
 }
 
 * {
@@ -22,14 +27,12 @@
   box-sizing: border-box;
 
   font-family: "Inter", sans-serif;
-  line-height: 140%;
-  font-size: 12px;
-  font-optical-sizing: auto;
-  font-style: normal;
+  font-weight: 140%;
+  font-size: 1rem;
+  color: var(--gray-100);
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
   background: var(--gray-600);
-  color: var(--gray-100);
-  -webkit-font-smoothing: antialiased;
 }

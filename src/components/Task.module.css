@@ -1,0 +1,48 @@
+.createTaskContainer,
+.createButton {
+	display: inherit;
+	justify-content: inherit;
+	align-items: center;
+}
+
+.createTaskContainer {
+	margin-top: -1.8rem;
+	gap: 0.5rem;
+	width: 100%;
+}
+
+.taskField {
+	background: var(--gray-500);
+
+	width: inherit;
+	height: 3.375rem;
+	padding: 1rem;
+
+	border: 1px solid var(--gray-700);
+	border-radius: 8px;
+}
+
+.taskField::placeholder {
+	color: var(--gray-300);
+}
+
+.createButton {
+	height: 3.25rem;
+	padding: 1rem;
+	gap: 0.5rem;
+
+	border-radius: 8px;
+	border: 0;
+
+	background: var(--blue-dark);
+	cursor: pointer;
+
+	font-weight: bold;
+	font-size: 14px;
+
+	transition: background-color, 0.2s;
+}
+
+.createButton:hover {
+	background: var(--blue);
+}

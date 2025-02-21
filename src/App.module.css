@@ -1,11 +1,10 @@
 .wrapper {
-  max-width: 46rem;
-  margin: 2rem auto;
-  padding: 0.1rem;
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
+  margin: auto;
+  max-width: 46rem;
 }
 
 @media (max-width: 768px) {
@@ -14,7 +13,6 @@
   }
 
   .wrapper {
-    padding: 0.5rem;
-    grid-template-columns: 1fr;
+    padding: 0.1rem;
   }
 }
