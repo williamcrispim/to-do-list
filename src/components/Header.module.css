@@ -1,36 +1,36 @@
 .header {
-	background: var(--gray-700);
-	max-height: 12.5rem;
+  background: var(--gray-700);
+  max-height: 12.5rem;
 }
 
 .header,
 .logoContainer,
 .title {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-height: inherit;
 }
 
 .logoContainer {
-	gap: 0.75rem;
-	margin: 4.5rem 0 5rem 0;
+  gap: 0.75rem;
+  margin: 4.5rem 0 5rem 0;
 }
 
 .logoContainer > img {
-	margin-top: 0.42rem;
+  margin-top: 0.42rem;
 }
 
 .title,
 .title * {
-	font-size: 40px;
+  font-size: 40px;
 }
 
 .title {
-	color: var(--blue);
-	font-weight: bold;
+  color: var(--blue);
+  font-weight: bold;
 }
 
 .title > span {
-	color: var(--purple);
+  color: var(--purple);
 }
