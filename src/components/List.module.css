@@ -1,0 +1,38 @@
+.content {
+  display: block;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.info span {
+  background: var(--gray-400);
+  color: var(--gray-200);
+  padding: 0.125rem 0.5rem;
+  margin-left: 0.25rem;
+  border-radius: 999px;
+}
+
+.emptyList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4rem 1.5rem;
+
+  border-radius: 8px;
+  border-top: groove 1px var(--gray-300);
+}
+
+.emptyList img {
+  margin-bottom: 1rem;
+}
+
+.emptyList p {
+  color: var(--gray-300);
+}

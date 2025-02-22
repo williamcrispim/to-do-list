@@ -5,8 +5,9 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.logoContainer}>
         <img src="/rocket.svg" alt="rocket logo" />
-        <p className={styles.title}>
-          to<span>do</span>
+        <p className="primaryText bold">
+          to
+          <span className="secondaryText">do</span>
         </p>
       </div>
     </header>

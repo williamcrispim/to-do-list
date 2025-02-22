@@ -15,22 +15,13 @@
 .logoContainer {
   gap: 0.75rem;
   margin: 4.5rem 0 5rem 0;
+  font-size: 40px;
+}
+
+.logoContainer * {
+  font-size: 40px;
 }
 
 .logoContainer > img {
   margin-top: 0.42rem;
-}
-
-.title,
-.title * {
-  font-size: 40px;
-}
-
-.title {
-  color: var(--blue);
-  font-weight: bold;
-}
-
-.title > span {
-  color: var(--purple);
 }
