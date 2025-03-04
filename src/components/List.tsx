@@ -19,16 +19,18 @@ export function List({ tasks }: ListProps) {
 				</p>
 			</header>
 			{tasks.length ? (
-				tasks.map((task) => {
-					return <p key={task.id}>{JSON.stringify(task)}</p>;
-					// return (<ul className={styles.list}>
-					//   <li>item 1</li>
-					//   <li>item 2</li>
-					//   <li>item 3</li>
-					//   <li>item 4</li>
-					//   <li>item 5</li>
-					// </ul>)
-				})
+				<ul className={styles.list}>
+					{tasks.map((task) => {
+						return (
+							<li key={task.id} className={styles.listItem}>
+								<input type="radio" key={task.id} />
+								<img src="/check.svg" alt="" className={styles.checked} />
+								<span>{task.description}</span>
+								<img src="/trash.svg" alt="trash icon" />
+							</li>
+						);
+					})}
+				</ul>
 			) : (
 				<div className={styles.emptyList}>
 					<img src="/Clipboard.svg" alt="clipboard icon" />
