@@ -49,11 +49,11 @@
 	background: var(--gray-500);
 }
 
-.listItem input[type="radio"] {
+.listItem .radioField {
 	-webkit-appearance: none;
 	appearance: none;
 	margin: 0;
-  padding: 0;
+	padding: 0;
 	width: 0.9375rem;
 	height: 0.9375rem;
 	border: 0.125rem solid var(--blue);
@@ -62,34 +62,54 @@
 	place-content: center;
 }
 
-.listItem input[type="radio"]:focus {
-  outline: transparent;
-  box-shadow: none;
+.listItem .radioField:focus {
+	outline: transparent;
+	box-shadow: none;
 }
 
-.listItem input[type="radio"]:checked {
-  display: none;
+.listItem .radioField:checked {
+	display: none;
 }
 
-.listItem input[type="radio"]:checked + img {
-  display: block;
+.listItem .radioField:checked + img {
+	display: block;
 }
 
-
-.listItem .checked {
-  display: none;
+.listItem .radioChecked {
+	display: none;
 	width: 0.9375rem;
 	height: 0.9375rem;
-  padding: 0.125rem;
-  border-radius: 50%;
-  background: var(--purple);
+	padding: 0.125rem;
+	border-radius: 50%;
+	background: var(--purple);
 }
 
-.listItem span {
+.listItem .description {
 	width: 100%;
 	margin: 0 0.75rem;
 }
 
 .listItem + .listItem {
 	margin-top: 0.75rem;
+}
+
+.deleteIcon {
+	background: transparent;
+	border: 0;
+	color: var(--gray-300);
+	cursor: pointer;
+	line-height: 0;
+	border-radius: 4px;
+  padding: 0.375rem;
+
+	transition: color 0.5s;
+}
+
+.deleteIcon:hover {
+	border-radius: 8px;
+	background-color: var(--gray-400);
+}
+
+.deleteIcon:hover img {
+	fill: red;
 }

@@ -1,6 +1,7 @@
 import styles from "./List.module.css";
 
 import { ListProps } from "../common/types";
+import { Trash } from "phosphor-react";
 
 export function List({ tasks }: ListProps) {
 	const checkedTasks = tasks.filter((task) => task.checked).length;
@@ -23,10 +24,24 @@ export function List({ tasks }: ListProps) {
 					{tasks.map((task) => {
 						return (
 							<li key={task.id} className={styles.listItem}>
-								<input type="radio" key={task.id} />
-								<img src="/check.svg" alt="" className={styles.checked} />
-								<span>{task.description}</span>
-								<img src="/trash.svg" alt="trash icon" />
+								<span className={styles.radioFieldContainer}>
+									<input
+										type="radio"
+										key={task.id}
+										className={styles.radioField}
+									/>
+									<img
+										src="/check.svg"
+										alt=""
+										className={styles.radioChecked}
+									/>
+								</span>
+								<span className={styles.description}>
+									<p>{task.description}</p>
+								</span>
+								<button title="delete task" className={styles.deleteIcon}>
+									<img src="/trash.svg" alt="" />
+								</button>
 							</li>
 						);
 					})}
