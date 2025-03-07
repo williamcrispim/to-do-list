@@ -28,12 +28,21 @@ export default function App() {
     });
 	}
 
+	function deleteTask(taskToDelete: TaskInterface) {
+		setTasks(state => {
+      return state.filter((task) => {
+      	if (task.id === taskToDelete.id) return;
+      	return task;
+      });
+    });
+	}
+
 	return (
 		<>
 			<Header />
 			<div className={styles.wrapper}>
 				<Task setTask={setTask} />
-				<List tasks={tasks} updateTask={updateTask} />
+				<List tasks={tasks} updateTask={updateTask} deleteTask={deleteTask} />
 			</div>
 		</>
 	);

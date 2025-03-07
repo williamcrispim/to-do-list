@@ -2,13 +2,17 @@ import styles from "./List.module.css";
 
 import { ListProps, TaskInterface } from "../types/types";
 
-export function List({ tasks, updateTask }: ListProps) {
+export function List({ tasks, updateTask, deleteTask }: ListProps) {
 	const checkedTasks = tasks.filter((task) => task.checked).length;
 
 	function handleTaskCLick(task: TaskInterface) {
 		const invertTaskCheckedValue = { ...task };
 		invertTaskCheckedValue.checked = !task.checked;
 		updateTask(invertTaskCheckedValue);
+	}
+	
+	function handleTaskDelete(task: TaskInterface) {
+		deleteTask(task);
 	}
 
 	return (
@@ -50,7 +54,7 @@ export function List({ tasks, updateTask }: ListProps) {
 								<span className={styles.description}>
 									<p>{task.description}</p>
 								</span>
-								<button title="delete task" className={styles.deleteButton}>
+								<button onClick={() => handleTaskDelete(task)} title="delete task" className={styles.deleteButton}>
 									<img src="/trash.svg" alt="" className={styles.deleteIcon} />
 								</button>
 							</li>
