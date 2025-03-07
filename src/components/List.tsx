@@ -1,10 +1,15 @@
 import styles from "./List.module.css";
 
-import { ListProps } from "../common/types";
-import { Trash } from "phosphor-react";
+import { ListProps, TaskInterface } from "../types/types";
 
-export function List({ tasks }: ListProps) {
+export function List({ tasks, updateTask }: ListProps) {
 	const checkedTasks = tasks.filter((task) => task.checked).length;
+
+	function handleTaskCLick(task: TaskInterface) {
+		const invertTaskCheckedValue = { ...task };
+		invertTaskCheckedValue.checked = !task.checked;
+		updateTask(invertTaskCheckedValue);
+	}
 
 	return (
 		<article className={styles.content}>
@@ -25,22 +30,28 @@ export function List({ tasks }: ListProps) {
 						return (
 							<li key={task.id} className={styles.listItem}>
 								<span className={styles.radioFieldContainer}>
-									<input
-										type="radio"
-										key={task.id}
-										className={styles.radioField}
-									/>
-									<img
-										src="/check.svg"
-										alt=""
-										className={styles.radioChecked}
-									/>
+									{task.checked ? (
+										<img
+											src="/check.svg"
+											alt=""
+											className={styles.radioChecked}
+											onClick={() => handleTaskCLick(task)}
+										/>
+									) : (
+										<input
+											type="radio"
+											key={task.id}
+											checked={task.checked}
+											onChange={() => handleTaskCLick(task)}
+											className={styles.radioField}
+										/>
+									)}
 								</span>
 								<span className={styles.description}>
 									<p>{task.description}</p>
 								</span>
 								<button title="delete task" className={styles.deleteButton}>
-									<img src="/trash.svg" alt="" className={styles.deleteIcon}/>
+									<img src="/trash.svg" alt="" className={styles.deleteIcon} />
 								</button>
 							</li>
 						);

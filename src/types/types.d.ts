@@ -11,4 +11,5 @@ export interface TaskProps {
 
 export interface ListProps {
   tasks: TaskInterface[];
+  updateTask: (taskUpdated: TaskInterface) => void
 }

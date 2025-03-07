@@ -67,16 +67,7 @@
 	box-shadow: none;
 }
 
-.listItem .radioField:checked {
-	display: none;
-}
-
-.listItem .radioField:checked + img {
-	display: block;
-}
-
 .listItem .radioChecked {
-	display: none;
 	width: 0.9375rem;
 	height: 0.9375rem;
 	padding: 0.125rem;

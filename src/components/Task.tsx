@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import styles from "./Task.module.css";
-import { TaskInterface, TaskProps } from "../common/types";
+import { TaskInterface, TaskProps } from "../types/types";
 
 const taskInitialModel = {
 	id: 0,
