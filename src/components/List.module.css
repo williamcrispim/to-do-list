@@ -67,12 +67,18 @@
 	box-shadow: none;
 }
 
+.listItem .radioField:hover {
+	background: var(--blue-dark);
+
+}
+
 .listItem .radioChecked {
 	width: 0.9375rem;
 	height: 0.9375rem;
 	padding: 0.125rem;
 	border-radius: 50%;
 	background: var(--purple);
+	line-height: 0;
 }
 
 .listItem .description {
@@ -101,5 +107,10 @@
 
 .deleteButton:hover .deleteIcon {
   filter: brightness(0) saturate(100%) invert(28%) sepia(95%) saturate(743%) hue-rotate(331deg) brightness(94%) contrast(89%);
+}
+
+.taskCompleted {
+	color: var(--gray-300);
+	text-decoration: line-through;
 }
 

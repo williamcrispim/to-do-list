@@ -10,7 +10,7 @@ export function List({ tasks, updateTask, deleteTask }: ListProps) {
 		invertTaskCheckedValue.checked = !task.checked;
 		updateTask(invertTaskCheckedValue);
 	}
-	
+
 	function handleTaskDelete(task: TaskInterface) {
 		deleteTask(task);
 	}
@@ -52,9 +52,15 @@ export function List({ tasks, updateTask, deleteTask }: ListProps) {
 									)}
 								</span>
 								<span className={styles.description}>
-									<p>{task.description}</p>
+									<p className={task.checked ? styles.taskCompleted : ""}>
+										{task.description}
+									</p>
 								</span>
-								<button onClick={() => handleTaskDelete(task)} title="delete task" className={styles.deleteButton}>
+								<button
+									onClick={() => handleTaskDelete(task)}
+									title="delete task"
+									className={styles.deleteButton}
+								>
 									<img src="/trash.svg" alt="" className={styles.deleteIcon} />
 								</button>
 							</li>
