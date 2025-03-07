@@ -93,23 +93,22 @@
 	margin-top: 0.75rem;
 }
 
-.deleteIcon {
+.deleteButton {
 	background: transparent;
 	border: 0;
-	color: var(--gray-300);
+	border-radius: 8px;
 	cursor: pointer;
 	line-height: 0;
-	border-radius: 4px;
   padding: 0.375rem;
 
 	transition: color 0.5s;
 }
 
-.deleteIcon:hover {
-	border-radius: 8px;
+.deleteButton:hover {
 	background-color: var(--gray-400);
 }
 
-.deleteIcon:hover img {
-	fill: red;
+.deleteButton:hover .deleteIcon {
+  filter: brightness(0) saturate(100%) invert(28%) sepia(95%) saturate(743%) hue-rotate(331deg) brightness(94%) contrast(89%);
 }
+

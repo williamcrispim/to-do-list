@@ -39,8 +39,8 @@ export function List({ tasks }: ListProps) {
 								<span className={styles.description}>
 									<p>{task.description}</p>
 								</span>
-								<button title="delete task" className={styles.deleteIcon}>
-									<img src="/trash.svg" alt="" />
+								<button title="delete task" className={styles.deleteButton}>
+									<img src="/trash.svg" alt="" className={styles.deleteIcon}/>
 								</button>
 							</li>
 						);
