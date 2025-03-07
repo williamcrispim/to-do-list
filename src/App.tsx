@@ -12,7 +12,7 @@ export default function App() {
 	const [tasks, setTasks] = useState<TaskInterface[]>([]);
 
 	function setTask(task: TaskInterface) {
-		setTasks([...tasks, task]);
+		setTasks([task, ...tasks]);
 	}
 
 	function updateTask(taskUpdated: TaskInterface) {
@@ -23,6 +23,7 @@ export default function App() {
         };
       	return task;
       });
+			stateUpdated.sort((a,b) => Number(a.checked) - Number(b.checked));
       return stateUpdated;
     });
 	}
